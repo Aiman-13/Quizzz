@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METADATA Quiz</title>
+    <link rel="stylesheet" href="../Questions.css">
+</head>
+
+<body>
+    <div class="BOX2"></div>
+    <h1>METADATA</h1>
+    <hr class="hr">
+    <div id="timer" class="timer">🕐⏳ Time Left: 100s</div>
+    <hr>
+    <br>
+    <form id="quiz">
+        <!-- Question 1 -->
+        <b>Q.1 The _________ tag defines metadata about an HTML document.</b>
+        <ol type="A">
+            <li><input type="radio" name="q1" value="A">metadata</li>
+            <li><input type="radio" name="q1" value="B">meta</li>
+            <li><input type="radio" name="q1" value="C">data</li>
+            <li><input type="radio" name="q1" value="D">head</li>
+        </ol><br>
+
+        <!-- Question 2 -->
+        <b>Q.2 meta tags always go inside the ________ element.</b>
+        <ol type="A">
+            <li><input type="radio" name="q2" value="A">div</li>
+            <li><input type="radio" name="q2" value="B">title</li>
+            <li><input type="radio" name="q2" value="C">head</li>
+            <li><input type="radio" name="q2" value="D">img</li>
+        </ol><br>
+
+        <!-- Question 3 -->
+        <b>Q.3 Will metadata be displayed on the page?</b>
+        <ol type="A">
+            <li><input type="radio" name="q3" value="A">YES</li>
+            <li><input type="radio" name="q3" value="B">NO</li>
+            <li><input type="radio" name="q3" value="C">Can be yes or no</li>
+            <li><input type="radio" name="q3" value="D">Can't say</li>
+        </ol><br>
+
+        <!-- Question 4 -->
+        <b>Q.4 Which attribute specifies the value associated with the http-equiv or name attribute?</b>
+        <ol type="A">
+            <li><input type="radio" name="q4" value="A">charset</li>
+            <li><input type="radio" name="q4" value="B">name</li>
+            <li><input type="radio" name="q4" value="C">http-equiv</li>
+            <li><input type="radio" name="q4" value="D">content</li>
+        </ol><br>
+
+        <!-- Question 5 -->
+        <b>Q.5 charset is used for?</b>
+        <ol type="A">
+            <li><input type="radio" name="q5" value="A">Specifies the character encoding for the HTML document</li>
+            <li><input type="radio" name="q5" value="B">Provides an HTTP header for the information/value of the content attribute</li>
+            <li><input type="radio" name="q5" value="C">Specifies a name for the metadata</li>
+            <li><input type="radio" name="q5" value="D">None of the above</li>
+        </ol><br>
+
+        <!-- Question 6 -->
+        <b>Q.6 Which of the following is not a function of robots meta tag?</b>
+        <ol type="A">
+            <li><input type="radio" name="q6" value="A">noindex</li>
+            <li><input type="radio" name="q6" value="B">nofollow</li>
+            <li><input type="radio" name="q6" value="C">norepeat</li>
+            <li><input type="radio" name="q6" value="D">noarchive</li>
+        </ol><br>
+
+        <!-- Question 7 -->
+        <b>Q.7 What is the role of charset attribute? It specifies</b>
+        <ol type="A">
+            <li><input type="radio" name="q7" value="A">a scheme to be used to interpret the value of the content attribute</li>
+            <li><input type="radio" name="q7" value="B">a name for the metadata</li>
+            <li><input type="radio" name="q7" value="C">the character encoding for the HTML document</li>
+            <li><input type="radio" name="q7" value="D">the character decoding for the HTML document</li>
+        </ol><br>
+
+        <!-- Question 8 -->
+        <b>Q.8 __________ prevents the page from being indexed altogether.</b>
+        <ol type="A">
+            <li><input type="radio" name="q8" value="A">nofollow</li>
+            <li><input type="radio" name="q8" value="B">noindex</li>
+            <li><input type="radio" name="q8" value="C">novalue</li>
+        </ol><br>
+
+        <!-- Question 9 -->
+        <b>Q.9 Metadata is used by browsers, search engines, and other web services.</b>
+        <ol type="A">
+            <li><input type="radio" name="q9" value="A">TRUE</li>
+            <li><input type="radio" name="q9" value="B">FALSE</li>
+            <li><input type="radio" name="q9" value="C">Can be true or false</li>
+            <li><input type="radio" name="q9" value="D">Can't say</li>
+        </ol><br>
+
+        <!-- Question 10 -->
+        <b>Q.10 meta supports which global attributes?</b>
+        <ol type="A">
+            <li><input type="radio" name="q10" value="A">accesskey</li>
+            <li><input type="radio" name="q10" value="B">class</li>
+            <li><input type="radio" name="q10" value="C">hidden</li>
+            <li><input type="radio" name="q10" value="D">All of the above</li>
+        </ol><br>
+
+        <div id="result"></div>
+        <button type="button" class="button">
+            <a href="../topics.html">BACK</a>
+        </button>
+        <button type="button" id="submitButton" class="button" onclick="submitQuiz()">SUBMIT</button>
+        <button type="button" id="checkAnswerButton" class="button" onclick="showAnswers()" style="display:none;">Check Answer</button>
+
+    </form>
+
+    <div id="answers" style="display: none; margin-top: 20px;">
+        <p><b>Correct Answers:</b></p>
+        <p><b>Q.1:</b> B - meta</p>
+        <p><b>Q.2:</b> C - head</p>
+        <p><b>Q.3:</b> B - No</p>
+        <p><b>Q.4:</b> D - content</p>
+        <p><b>Q.5:</b> A - Specifies the character encoding for the HTML document</p>
+        <p><b>Q.6:</b> C - norepeat</p>
+        <p><b>Q.7:</b> C - the character encoding for the HTML document</p>
+        <p><b>Q.8:</b> B - noindex</p>
+        <p><b>Q.9:</b> A - TRUE</p>
+        <p><b>Q.10:</b> D - All of the above</p>
+    </div>
+
+    <script>
+        let timeLeft = 100;
+        const timerElement = document.getElementById("timer");
+        const resultElement = document.getElementById("result");
+        const quizForm = document.getElementById("quiz");
+
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                submitQuiz(); 
+            } else {
+                timerElement.textContent = `🕐⏳ Time Left: ${timeLeft}s`;
+                timeLeft -= 1;
+            }
+        }, 1000);
+
+        // Submit quiz and calculate score
+        function submitQuiz() {
+            clearInterval(timer); 
+            let score = 0;
+            const answers = {
+                q1: "B",
+                q2: "C",
+                q3: "B",
+                q4: "D",
+                q5: "A",
+                q6: "C",
+                q7: "C",
+                q8: "B",
+                q9: "A",
+                q10: "D"
+            };
+
+            // Check answers
+            for (const [question, correctAnswer] of Object.entries(answers)) {
+                const userAnswer = quizForm.elements[question] ? quizForm.elements[question].value : null;
+                if (userAnswer === correctAnswer) {
+                    score += 1;
+                }
+            }
+
+            // Display result and hide the submit button
+            resultElement.textContent = `🥇🏆 Your score: ${score} / ${Object.keys(answers).length}`;
+            
+            // Hide submit button and show check answer button
+            document.getElementById('submitButton').style.display = 'none';
+            document.getElementById('checkAnswerButton').style.display = 'inline';
+        }
+
+        // Toggle visibility of correct answers
+        function showAnswers() {
+            const answersDiv = document.getElementById("answers");
+            if (answersDiv.style.display === "none") {
+                answersDiv.style.display = "block";
+            } else {
+                answersDiv.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

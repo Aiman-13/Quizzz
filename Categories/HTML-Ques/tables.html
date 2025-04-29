@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE Quiz</title>
+    <link rel="stylesheet" href="../Questions.css">
+</head>
+
+<body>
+    <div class="BOX2"></div>
+    <h1>TABLE</h1>
+    <hr class="hr">
+    <div id="timer" class="timer">🕐⏳Time Left: 100s</div>
+    <hr>
+    <br>
+    <form id="quiz">
+        <!-- Question 1 -->
+        <b>Q.1 Which HTML tag is used to define a table?</b>
+        <ol type="A">
+            <li><input type="radio" name="q1" value="A">&lt;tb&gt;</li>
+            <li><input type="radio" name="q1" value="B">&lt;tl&gt;</li>
+            <li><input type="radio" name="q1" value="C">&lt;table&gt;</li>
+            <li><input type="radio" name="q1" value="D">&lt;tab&gt;</li>
+        </ol><br>
+
+        <!-- Question 2 -->
+        <b>Q.2 With the help of which tag, is a row defined in HTML?</b>
+        <ol type="A">
+            <li><input type="radio" name="q2" value="A">&lt;row&gt;</li>
+            <li><input type="radio" name="q2" value="B">&lt;tablerow&gt;</li>
+            <li><input type="radio" name="q2" value="C">&lt;tr&gt;</li>
+        </ol><br>
+
+        <!-- Question 3 -->
+        <b>Q.3 Choose the correct option.</b>
+        <ol type="A">
+            <li><input type="radio" name="q3" value="A">&lt;th&gt; is used for defining the heading of a table.</li>
+            <li><input type="radio" name="q3" value="B">By default, contents written between &lt;th&gt; &lt;/th&gt; are bold and centered.</li>
+            <li><input type="radio" name="q3" value="C">Both A and B</li>
+            <li><input type="radio" name="q3" value="D">none of the above</li>
+        </ol><br>
+
+        <!-- Question 4 -->
+        <b>Q.4 By using which of the following options, the border of table can be collapsed?</b>
+        <ol type="A">
+            <li><input type="radio" name="q4" value="A">border-collapse:collapse</li>
+            <li><input type="radio" name="q4" value="B">table-border:collapse</li>
+            <li><input type="radio" name="q4" value="C">border:collapse</li>
+            <li><input type="radio" name="q4" value="D">table-border-collapse:collapse</li>
+        </ol><br>
+
+        <!-- Question 5 -->
+        <b>Q.5 Fill in the blanks to get the table output.</b>
+        <ol type="A">
+            <li><input type="radio" name="q5" value="A">colspan="1"</li>
+            <li><input type="radio" name="q5" value="B">colspan="2"</li>
+            <li><input type="radio" name="q5" value="C">rowspan="1"</li>
+            <li><input type="radio" name="q5" value="D">rowspan="2"</li>
+        </ol><br>
+
+        <!-- Question 6 -->
+        <b>Q.6 To add space of 20px between cell content and its border, which CSS is used?</b>
+        <ol type="A">
+            <li><input type="radio" name="q6" value="A">th, td { padding: 20px; }</li>
+            <li><input type="radio" name="q6" value="B">table { margin: 20px; }</li>
+            <li><input type="radio" name="q6" value="C">table { border: 20px; }</li>
+            <li><input type="radio" name="q6" value="D">table { padding: 20px; }</li>
+        </ol><br>
+
+        <!-- Question 7 -->
+        <b>Q.7 Which tag is used to add caption to a table?</b>
+        <ol type="A">
+            <li><input type="radio" name="q7" value="A">&lt;table-caption&gt;</li>
+            <li><input type="radio" name="q7" value="B">&lt;tcaption&gt;</li>
+            <li><input type="radio" name="q7" value="C">&lt;caption&gt;</li>
+            <li><input type="radio" name="q7" value="D">&lt;tc&gt;</li>
+        </ol><br>
+
+        <!-- Question 8 -->
+        <b>Q.8 Which option defines spacing between table cells?</b>
+        <ol type="A">
+            <li><input type="radio" name="q8" value="A">border-spacing</li>
+            <li><input type="radio" name="q8" value="B">spacing</li>
+            <li><input type="radio" name="q8" value="C">cell-spacing</li>
+            <li><input type="radio" name="q8" value="D">table-spacing</li>
+        </ol><br>
+
+        <!-- Question 9 -->
+        <b>Q.9 By default, content between &lt;th&gt; and &lt;/th&gt; is centered. How can it be aligned to the left?</b>
+        <ol type="A">
+            <li><input type="radio" name="q9" value="A">th { align: left; }</li>
+            <li><input type="radio" name="q9" value="B">th { text-align: left; }</li>
+            <li><input type="radio" name="q9" value="C">th { font-align: center; }</li>
+            <li><input type="radio" name="q9" value="D">None of the above</li>
+        </ol><br>
+
+        <!-- Question 10 -->
+        <b>Q.10 Fill in the blanks to get the table output.</b>
+        <ol type="A">
+            <li><input type="radio" name="q10" value="A">colspan="1"</li>
+            <li><input type="radio" name="q10" value="B">colspan="2"</li>
+            <li><input type="radio" name="q10" value="C">rowspan="1"</li>
+            <li><input type="radio" name="q10" value="D">rowspan="2"</li>
+        </ol><br>
+
+        <div id="result"></div>
+        <button type="button" class="button">
+            <a href="../topics.html">BACK</a></button>
+        <button type="button" class="button" id="submitButton" onclick="submitQuiz()">SUBMIT</button>
+        <button type="button" class="button" id="checkAnswerButton" onclick="showAnswers()" style="display:none;">Check Answer</button>
+    </form>
+
+    <!-- Correct Answers Section -->
+    <div id="answers" style="display: none; margin-top: 20px;">
+        <p><b>Correct Answers:</b></p>
+        <p><b>Q.1:</b> C - &lt;table&gt;</p>
+        <p><b>Q.2:</b> C - &lt;tr&gt;</p>
+        <p><b>Q.3:</b> C - Both A and B</p>
+        <p><b>Q.4:</b> A - border-collapse:collapse</p>
+        <p><b>Q.5:</b> D - rowspan="2"</p>
+        <p><b>Q.6:</b> A - th, td { padding: 20px; }</p>
+        <p><b>Q.7:</b> C - &lt;caption&gt;</p>
+        <p><b>Q.8:</b> A - border-spacing</p>
+        <p><b>Q.9:</b> B - th { text-align: left; }</p>
+        <p><b>Q.10:</b> B - colspan="2"</p>
+    </div>
+
+    <script>
+        let timeLeft = 100;
+        const timerElement = document.getElementById("timer");
+        const resultElement = document.getElementById("result");
+        const quizForm = document.getElementById("quiz");
+        const submitButton = document.getElementById("submitButton");
+        const checkAnswerButton = document.getElementById("checkAnswerButton");
+
+        // Timer function
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                submitQuiz();
+            } else {
+                timerElement.textContent = `🕐⏳Time Left: ${timeLeft}s`;
+                timeLeft -= 1;
+            }
+        }, 1000);
+
+        // Submit quiz and calculate score
+        function submitQuiz() {
+            clearInterval(timer);
+            let score = 0;
+            const answers = {
+                q1: "C",
+                q2: "C",
+                q3: "C",
+                q4: "A",
+                q5: "D",
+                q6: "A",
+                q7: "C",
+                q8: "A",
+                q9: "B",
+                q10: "B"
+            };
+            for (const [question, correctAnswer] of Object.entries(answers)) {
+                const userAnswer = quizForm.elements[question]?.value;
+                if (userAnswer === correctAnswer) {
+                    score += 1;
+                }
+            }
+            resultElement.textContent = `🥇🏆Your score: ${score} / ${Object.keys(answers).length}`;
+            submitButton.style.display = "none";  // Hide submit button
+            checkAnswerButton.style.display = "inline-block";  // Show check answer button
+        }
+        // Toggle visibility of correct answers
+        function showAnswers() {
+            const answersDiv = document.getElementById("answers");
+            if (answersDiv.style.display === "none") {
+                answersDiv.style.display = "block";
+            } else {
+                answersDiv.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

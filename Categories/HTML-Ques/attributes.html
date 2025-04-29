@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes Quiz</title>
+    <link rel="stylesheet" href="../Questions.css">
+</head>
+
+<body>
+    <div class="BOX2">
+        <h1>ATTRIBUTES</h1>
+        <hr class="hr">
+        <div class="timer" id="timer">🕐⏳Time Left: 100s</div>
+        <hr>
+        <BR>
+        <form id="quiz">
+            <b>Q.1 How many core attributes that can be used on the majority of HTML elements?</b>
+            <ol type="A">
+                <li><input type="radio" name="q1" value="A">1</li>
+                <li><input type="radio" name="q1" value="B">2</li>
+                <li><input type="radio" name="q1" value="C">3</li>
+                <li><input type="radio" name="q1" value="D">4</li>
+            </ol><br>
+
+            <b>Q.2 The ______ attribute of an HTML tag can be used to uniquely identify any element within an HTML page.</b>
+            <ol type="A">
+                <li><input type="radio" name="q2" value="A">title</li>
+                <li><input type="radio" name="q2" value="B">ID</li>
+                <li><input type="radio" name="q2" value="C">class</li>
+                <li><input type="radio" name="q2" value="D">style</li>
+            </ol><br>
+
+            <b>Q.3 The title attribute gives a suggested title for the element.</b>
+            <ol type="A">
+                <li><input type="radio" name="q3" value="A">TRUE</li>
+                <li><input type="radio" name="q3" value="B">FALSE</li>
+                <li><input type="radio" name="q3" value="C">CAN BE TRUE OR FALSE</li>
+                <li><input type="radio" name="q3" value="D">CAN'T SAY</li>
+            </ol><br>
+
+            <b>Q.4 How many internationalization attributes there?</b>
+            <ol type="A">
+                <li><input type="radio" name="q4" value="A">1</li>
+                <li><input type="radio" name="q4" value="B">2</li>
+                <li><input type="radio" name="q4" value="C">3</li>
+                <li><input type="radio" name="q4" value="D">4</li>
+            </ol><br>
+
+            <b>Q.5 The _________ attribute allows you to indicate to the browser about the direction in which the text should flow.</b>
+            <ol type="A">
+                <li><input type="radio" name="q5" value="A">lang</li>
+                <li><input type="radio" name="q5" value="B">xml:lang</li>
+                <li><input type="radio" name="q5" value="C">both a and b</li>
+                <li><input type="radio" name="q5" value="D">dir</li>
+            </ol><br>
+
+            <b>Q.6 The value of the xml:lang attribute should be an ________ country code.</b>
+            <ol type="A">
+                <li><input type="radio" name="q6" value="A">ISO-638</li>
+                <li><input type="radio" name="q6" value="B">ISO-639</li>
+                <li><input type="radio" name="q6" value="C">ISO-640</li>
+                <li><input type="radio" name="q6" value="D">ISO-641</li>
+            </ol><br>
+
+            <b>Q.7 What can be used to verify a displayed graphics?</b>
+            <ol type="A">
+                <li><input type="radio" name="q7" value="A">Property checkpoints</li>
+                <li><input type="radio" name="q7" value="B">Region checkpoints</li>
+                <li><input type="radio" name="q7" value="C">On-Screen Action</li>
+                <li><input type="radio" name="q7" value="D">Local Storage</li>
+            </ol><br>
+
+            <b>Q.8 Which of the following does not lie under the attribute of &lt;input&gt; and is not supported by Opera?</b>
+            <ol type="A">
+                <li><input type="radio" name="q8" value="A">url</li>
+                <li><input type="radio" name="q8" value="B">time</li>
+                <li><input type="radio" name="q8" value="C">tel</li>
+                <li><input type="radio" name="q8" value="D">option</li>
+            </ol><br>
+
+            <b>Q.9 What does wrap attribute denote?</b>
+            <ol type="A">
+                <li><input type="radio" name="q9" value="A">Whether the text is in bold</li>
+                <li><input type="radio" name="q9" value="B">Whether the text is wrapped</li>
+                <li><input type="radio" name="q9" value="C">Whether the text is in Italic</li>
+                <li><input type="radio" name="q9" value="D">Whether the text is highlighted</li>
+            </ol><br>
+
+            <b>Q.10 The lang attribute allows you to indicate the main language used in a document.</b>
+            <ol type="A">
+                <li><input type="radio" name="q10" value="A">YES</li>
+                <li><input type="radio" name="q10" value="B">NO</li>
+                <li><input type="radio" name="q10" value="C">CAN BE YES OR NO</li>
+                <li><input type="radio" name="q10" value="D">CAN'T SAY</li>
+            </ol><br>
+
+            <div id="result"></div>
+            <button type="button" class="button">
+                <a href="../topics.html">BACK</a></button>
+
+            <button type="button" class="button" id="submitButton" onclick="submitQuiz()">Submit</button>
+            <button type="button" class="button" id="checkAnswerButton" onclick="showAnswers()" style="display:none;">Check Answer</button>
+        </form>
+    </div>
+
+    <!-- Hidden section to display correct answers -->
+    <div id="answers" style="display:none; margin-top: 20px;">
+        <p><b>Correct Answers:</b></p>
+        <p><b>Q1:</b> D - 4</p>
+        <p><b>Q2:</b> B - ID</p>
+        <p><b>Q3:</b> A - TRUE</p>
+        <p><b>Q4:</b> C - 3</p>
+        <p><b>Q5:</b> D - dir</p>
+        <p><b>Q6:</b> B - ISO-639</p>
+        <p><b>Q7:</b> B - Region checkpoints</p>
+        <p><b>Q8:</b> D - option</p>
+        <p><b>Q9:</b> B - Whether the text is wrapped</p>
+        <p><b>Q10:</b> A - YES</p>
+    </div>
+
+    <script>
+        let timeLeft = 100;
+        const timerElement = document.getElementById("timer");
+        const resultElement = document.getElementById("result");
+        const quizForm = document.getElementById("quiz");
+        const submitButton = document.getElementById("submitButton");
+        const checkAnswerButton = document.getElementById("checkAnswerButton");
+
+        // Timer countdown
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                submitQuiz(); // Automatically submit when time is up
+            } else {
+                timerElement.textContent = `🕐⏳Time Left: ${timeLeft}s`;
+                timeLeft -= 1;
+            }
+        }, 1000);
+
+        // Submit Quiz
+        function submitQuiz() {
+            clearInterval(timer); // Stop the timer
+            let score = 0;
+            const answers = {
+                q1: "D",
+                q2: "B",
+                q3: "A",
+                q4: "C",
+                q5: "D",
+                q6: "B",
+                q7: "B",
+                q8: "D",
+                q9: "B",
+                q10: "A"
+            };
+
+            for (const [question, correctAnswer] of Object.entries(answers)) {
+                const userAnswer = quizForm.elements[question]?.value;
+                if (userAnswer === correctAnswer) {
+                    score += 1;
+                }
+            }
+
+            resultElement.textContent = `🥇🏆 Your score: ${score} / ${Object.keys(answers).length}`;
+            submitButton.style.display = "none";  // Hide submit button
+            checkAnswerButton.style.display = "inline-block";  // Show check answer button
+        }
+
+        // Show answers
+        function showAnswers() {
+            const answersDiv = document.getElementById("answers");
+            answersDiv.style.display = (answersDiv.style.display === "none") ? "block" : "none";
+        }
+    </script>
+</body>
+
+</html>

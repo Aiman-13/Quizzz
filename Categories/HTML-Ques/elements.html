@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics Quiz</title>
+    <link rel="stylesheet" href="../Questions.css">
+</head>
+
+<body>
+    <div class="BOX2">
+        <h1>ELEMENTS</h1>
+        <hr class="hr">
+
+        <div class="timer" id="timer">🕐⏳Time Left: 100s</div>
+        <hr>
+        <br>
+        <form id="quiz">
+            <b>Q.1 Choose the correct option.</b>
+            <ol type="A">
+                <li><input type="radio" name="q1" value="A">Elements in HTML describes the way of presenting the content in the browser.</li>
+                <li><input type="radio" name="q1" value="B">All elements must have at least one attribute associated with it.</li>
+                <li><input type="radio" name="q1" value="C">Both a and b.</li>
+            </ol><br>
+
+            <b>Q.2 In HTML, ul means</b>
+            <ol type="A">
+                <li><input type="radio" name="q2" value="A">Underline</li>
+                <li><input type="radio" name="q2" value="B">Unique list</li>
+                <li><input type="radio" name="q2" value="C">Unordered list</li>
+            </ol><br>
+
+            <b>Q.3 Which one of the following options is correct?</b>
+            <ol type="A">
+                <li><input type="radio" name="q3" value="A">Both block element and inline element start in the new line.</li>
+                <li><input type="radio" name="q3" value="B">Both block element and inline element start in the same line</li>
+                <li><input type="radio" name="q3" value="C">Only inline element starts in new line</li>
+                <li><input type="radio" name="q3" value="D">Only block element starts in new line.</li>
+            </ol><br>
+
+            <b>Q.4 Which of the following is a block element?</b>
+            <ol type="A">
+                <li><input type="radio" name="q4" value="A">b</li>
+                <li><input type="radio" name="q4" value="B">i</li>
+                <li><input type="radio" name="q4" value="C">p</li>
+                <li><input type="radio" name="q4" value="D">u</li>
+            </ol><br>
+
+            <b>Q.5 Which of the following is an inline element?</b>
+            <ol type="A">
+                <li><input type="radio" name="q5" value="A">p</li>
+                <li><input type="radio" name="q5" value="B">h1</li>
+                <li><input type="radio" name="q5" value="C">div</li>
+                <li><input type="radio" name="q5" value="D">s</li>
+            </ol><br>
+
+            <b>Q.6 Choose the appropriate tag to get the content in browser as follows: <br>
+                &lt;html&gt; &lt;body&gt; _________ Johny johny yes papa __________ &lt;/body&gt; &lt;/html&gt;
+            </b>
+            <ol type="A">
+                <li><input type="radio" name="q6" value="A">&lt;p&gt; &lt;/p&gt;</li>
+                <li><input type="radio" name="q6" value="B">&lt;pre&gt;&lt;/pre&gt;</li>
+                <li><input type="radio" name="q6" value="C">&lt;s&gt;&lt;/s&gt;</li>
+                <li><input type="radio" name="q6" value="D">&lt;body&gt;&lt;/body&gt;</li>
+            </ol><br>
+
+            <b>Q.7 Which one of the following is the least significant heading tag?</b>
+            <ol type="A">
+                <li><input type="radio" name="q7" value="A">h1</li>
+                <li><input type="radio" name="q7" value="B">h3</li>
+                <li><input type="radio" name="q7" value="C">h5</li>
+                <li><input type="radio" name="q7" value="D">h6</li>
+            </ol><br>
+
+            <b>Q.8 Which one of the following is the most significant heading tag?</b>
+            <ol type="A">
+                <li><input type="radio" name="q8" value="A">h1</li>
+                <li><input type="radio" name="q8" value="B">h3</li>
+                <li><input type="radio" name="q8" value="C">h5</li>
+                <li><input type="radio" name="q8" value="D">h6</li>
+            </ol><br>
+
+            <b>Q.9 Choose the correct option.</b>
+            <ol type="A">
+                <li><input type="radio" name="q9" value="A">HTML elements are represented within tags.</li>
+                <li><input type="radio" name="q9" value="B">HTML tags are case insensitive.</li>
+                <li><input type="radio" name="q9" value="C">While executing an HTML document, browser do not display the tags.</li>
+                <li><input type="radio" name="q9" value="D">All of the above</li>
+            </ol><br>
+
+            <b>Q.10 Fill in the blank so that the browser display- Charge of electron is 1.602x10^(-19) on executing the HTML document?</b>
+            <ol type="A">
+                <li><input type="radio" name="q10" value="A">Charge of electron is 1.602x10-&lt;sup&gt;19 /sup </li>
+                <li><input type="radio" name="q10" value="B">Charge of electron is 1.602x10 &lt;sup &gt;-19 /sup </li>
+                <li><input type="radio" name="q10" value="C">Charge of electron is 1.602x10- &lt;sub&gt;19 /sub </li>
+                <li><input type="radio" name="q10" value="D">Charge of electron is 1.602x10 &lt;sub&gt;-19 /sub </li>
+            </ol><br>
+
+            <div id="result"></div>
+            <button type="button" class="button">
+                <a href="../topics.html">BACK</a></button>
+
+            <button type="button" class="button" id="submitButton" onclick="submitQuiz()">Submit</button>
+            <button type="button" class="button" id="checkAnswerButton" onclick="showAnswers()" style="display:none;">Check Answer</button>
+        </form>
+
+        <!-- Hidden section to display correct answers -->
+        <div id="answers" style="display:none; margin-top: 20px;">
+            <p><b>Correct Answers:</b></p>
+            <p><b>Q1:</b> A - Elements in HTML describes the way of presenting the content in the browser.</p>
+            <p><b>Q2:</b> C - Unordered list.</p>
+            <p><b>Q3:</b> D - Only block element starts in new line.</p>
+            <p><b>Q4:</b> C - p</p>
+            <p><b>Q5:</b> D - s</p>
+            <p><b>Q6:</b> B - &lt;pre&gt;&lt;/pre&gt;</p>
+            <p><b>Q7:</b> D - h6</p>
+            <p><b>Q8:</b> A - h1</p>
+            <p><b>Q9:</b> D - All of the above</p>
+            <p><b>Q10:</b> B - Charge of electron is 1.602x10 &lt;sup&gt;-19 /sup</p>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 100;
+        const timerElement = document.getElementById("timer");
+        const resultElement = document.getElementById("result");
+        const quizForm = document.getElementById("quiz");
+        const buttonContainer = document.getElementById("button-container");
+
+        // Timer countdown
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                submitQuiz(); // Automatically submit when time is up
+            } else {
+                timerElement.textContent = `🕐⏳Time Left: ${timeLeft}s`;
+                timeLeft -= 1;
+            }
+        }, 1000);
+
+        // Submit Quiz
+        function submitQuiz() {
+            clearInterval(timer); // Stop the timer
+            let score = 0;
+            const totalQuestions = 10; // Total number of questions
+            const correctAnswers = {
+                q1: 'A',
+                q2: 'C',
+                q3: 'D',
+                q4: 'C',
+                q5: 'D',
+                q6: 'B',
+                q7: 'D',
+                q8: 'A',
+                q9: 'D',
+                q10: 'B',
+            };
+
+            // Loop through all questions and check answers
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selectedOption && selectedOption.value === correctAnswers[`q${i}`]) {
+                    score++;
+                }
+            }
+
+            // Display score and show correct answers
+            resultElement.innerHTML = `🥇🏆Your score: ${score} / ${totalQuestions}`;
+            document.getElementById("answers").style.display = 'block';
+
+            // Replace the Submit button with a Check Answer button
+            buttonContainer.innerHTML = '<button type="button" class="button" onclick="showAnswers()">Check Answers</button>';
+        }
+
+        function showAnswers() {
+            document.getElementById("answers").style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

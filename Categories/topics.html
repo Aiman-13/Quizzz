@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Select Category</title>
+  <link rel="stylesheet" href="../Categories/topics.css">
+  <link rel="script" href="../Categories/scroller.js">
+</head>
+<body>
+    <div id="navbar"></div>
+    <script>
+        fetch('../Navbar/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+        });
+    </script>
+
+  <div class="container">
+    <h1>TOPICS</h1>
+    <h2><b>HTML</b></h2>
+    <div class="category-scroll">
+      <div class="category-item"><a href="../Categories/HTML-Ques/attributes.html">ATTRIBUTES</a></div>
+      <div class="category-item"><a href="../Categories/HTML-Ques/basics.html">BASICS</a></div>
+      <div class="category-item"><a href="../Categories/HTML-Ques/elements.html">ELEMENTS</a></div>
+      <div class="category-item"><a href="../Categories/HTML-Ques/form.html">FORM</a></div>
+      <div class="category-item"><a href="../Categories/HTML-Ques/heading.html">HEADING</a></div>
+      <div class="category-item"><a href="../Categories/HTML-Ques/link.html">LINK</a></div>
+      <div class="category-item"><a href="../Categories/HTML-Ques/list.html">LIST</a></div>
+      <div class="category-item"><a href="../Categories/HTML-Ques/metadata.html">METADATA</a></div>
+      <div class="category-item"><a href="../Categories/HTML-Ques/tables.html">TABLES</a></div>
+      <div class="category-item"><a href="../Categories/HTML-Ques/tags.html">TAGS</a></div>
+    </div>
+    <h2><b>CSS</b></h2>
+    <div class="category-scroll">
+      <div class="category-item"><a href="../Categories/CSS-Ques/basic.html">BASICS</a></div>
+      <div class="category-item"><a href="../Categories/CSS-Ques/flexbox.html">FLEXBOX</a></div>
+      <div class="category-item"><a href="../Categories/CSS-Ques/grid.html">GRID</a></div>
+      <div class="category-item"><a href="../Categories/CSS-Ques/layout-techniques.html">LAYOUT TECHNIQUES</a></div>
+      <div class="category-item"><a href="../Categories/CSS-Ques/pseudo-elements.html">PSEUDO ELEMENTS</a></div>
+    </div>
+    <!-- <button id="submitBtn">Submit</button> -->
+  </div>
+
+</body>
+</html>

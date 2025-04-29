@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <link rel="stylesheet" href="../Questions.css">
+</head>
+<body>
+    <div class="BOX2"></div>
+    <h1>Grid Layout</h1>
+    <hr class="hr">
+    <div id="timer" class="timer">🕐⏳Time Left: 100s</div>
+    <hr>
+    <br>
+    <form id="quiz">
+        <b>Q.1 What property do you use to turn an element into a grid container?</b>
+        <ol type="A">
+            <li><input type="radio" name="q1" value="A">display: flex;</li>
+            <li><input type="radio" name="q1" value="B">display: block;</li>
+            <li><input type="radio" name="q1" value="C">display: grid;</li>
+            <li><input type="radio" name="q1" value="D">position: grid;</li>
+        </ol><br>
+
+        <b>Q.2 Which property defines the number of columns in a grid?</b>
+        <ol type="A">
+            <li><input type="radio" name="q2" value="A">grid-template-rows</li>
+            <li><input type="radio" name="q2" value="B">grid-template-columns</li>
+            <li><input type="radio" name="q2" value="C">grid-column-gap</li>
+            <li><input type="radio" name="q2" value="D">grid-gap</li>
+        </ol><br>
+
+        <b>Q.3 How do you make a grid item span multiple columns?</b>
+        <ol type="A">
+            <li><input type="radio" name="q3" value="A">grid-column: span 2;</li>
+            <li><input type="radio" name="q3" value="B">grid-span: 2;</li>
+            <li><input type="radio" name="q3" value="C">column-span: 2;</li>
+            <li><input type="radio" name="q3" value="D">span: grid 2;</li>
+        </ol><br>
+
+        <b>Q.4 What property sets the gap between rows in a grid layout?</b>
+        <ol type="A">
+            <li><input type="radio" name="q4" value="A">row-gap</li>
+            <li><input type="radio" name="q4" value="B">grid-gap</li>
+            <li><input type="radio" name="q4" value="C">grid-row-gap</li>
+            <li><input type="radio" name="q4" value="D">gap-row</li>
+        </ol><br>
+
+        <b>Q.5 Which unit is commonly used with grids for fractional space?</b>
+        <ol type="A">
+            <li><input type="radio" name="q5" value="A">em</li>
+            <li><input type="radio" name="q5" value="B">px</li>
+            <li><input type="radio" name="q5" value="C">%</li>
+            <li><input type="radio" name="q5" value="D">fr</li>
+        </ol><br>
+
+        <b>Q.6 What is the default value of justify-items in a CSS Grid?</b>
+        <ol type="A">
+            <li><input type="radio" name="q6" value="A">start</li>
+            <li><input type="radio" name="q6" value="B">center</li>
+            <li><input type="radio" name="q6" value="C">stretch</li>
+            <li><input type="radio" name="q6" value="D">end</li>
+        </ol><br>
+
+        <b>Q.7 Which property would you use to create named grid areas?</b>
+        <ol type="A">
+            <li><input type="radio" name="q7" value="A">grid-areas</li>
+            <li><input type="radio" name="q7" value="B">grid-template-areas</li>
+            <li><input type="radio" name="q7" value="C">area-template</li>
+            <li><input type="radio" name="q7" value="D">template-areas</li>
+        </ol><br>
+
+        <b>Q.8 How can you place items automatically in the next row when needed?</b>
+        <ol type="A">
+            <li><input type="radio" name="q8" value="A">grid-auto-flow: column;</li>
+            <li><input type="radio" name="q8" value="B">grid-auto-flow: row;</li>
+            <li><input type="radio" name="q8" value="C">flow: auto;</li>
+            <li><input type="radio" name="q8" value="D">auto-flow: grid;</li>
+        </ol><br>
+
+        <b>Q.9 What happens if you set grid-template-columns: 1fr 2fr?</b>
+        <ol type="A">
+            <li><input type="radio" name="q9" value="A">First column is twice as wide as second</li>
+            <li><input type="radio" name="q9" value="B">Second column is twice as wide as first</li>
+            <li><input type="radio" name="q9" value="C">Both columns are equal</li>
+            <li><input type="radio" name="q9" value="D">Grid will not work</li>
+        </ol><br>
+
+        <b>Q.10 Which property defines the size of implicitly created grid rows?</b>
+        <ol type="A">
+            <li><input type="radio" name="q10" value="A">grid-auto-rows</li>
+            <li><input type="radio" name="q10" value="B">grid-template-rows</li>
+            <li><input type="radio" name="q10" value="C">auto-rows</li>
+            <li><input type="radio" name="q10" value="D">template-auto-rows</li>
+        </ol><br>
+
+        <div id="result"></div>
+        <br>
+        <button type="button" class="button">
+            <a href="../topics.html">BACK</a>
+        </button>
+        <button type="button" id="submitButton" class="button" onclick="submitQuiz()">SUBMIT</button>
+        <button type="button" id="checkAnswerButton" class="button" onclick="showAnswers()" style="display:none;">Check Answers</button>
+    </form>
+
+    <div id="answers" style="display:none; margin-top: 20px;">
+        <p><b>Correct Answers:</b></p>
+        <p><b>Q1:</b> C - display: grid;</p>
+        <p><b>Q2:</b> B - grid-template-columns</p>
+        <p><b>Q3:</b> A - grid-column: span 2;</p>
+        <p><b>Q4:</b> C - grid-row-gap</p>
+        <p><b>Q5:</b> D - fr</p>
+        <p><b>Q6:</b> C - stretch</p>
+        <p><b>Q7:</b> B - grid-template-areas</p>
+        <p><b>Q8:</b> B - grid-auto-flow: row;</p>
+        <p><b>Q9:</b> B - Second column is twice as wide as first</p>
+        <p><b>Q10:</b> A - grid-auto-rows</p>
+    </div>
+
+    <script>
+        let timeLeft = 100;
+        const timerElement = document.getElementById("timer");
+        const resultElement = document.getElementById("result");
+        const quizForm = document.getElementById("quiz");
+
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                submitQuiz(); 
+            } else {
+                timerElement.textContent = `🕐⏳Time Left: ${timeLeft}s`;
+                timeLeft -= 1;
+            }
+        }, 1000);
+
+        function submitQuiz() {
+            clearInterval(timer); 
+            let score = 0;
+            const answers = {
+                q1: "C",
+                q2: "B",
+                q3: "A",
+                q4: "C",
+                q5: "D",
+                q6: "C",
+                q7: "B",
+                q8: "B",
+                q9: "B",
+                q10: "A"
+            };
+
+            for (const [question, correctAnswer] of Object.entries(answers)) {
+                const userAnswer = Array.from(quizForm.elements[question]).find(r => r.checked)?.value;
+                if (userAnswer === correctAnswer) {
+                    score += 1;
+                }
+            }
+
+            resultElement.textContent = `🥇🏆Your score: ${score} / ${Object.keys(answers).length}`;
+
+            document.getElementById('submitButton').style.display = 'none';
+            document.getElementById('checkAnswerButton').style.display = 'inline';
+        }
+
+        function showAnswers() {
+            const answersDiv = document.getElementById("answers");
+            if (answersDiv.style.display === "none") {
+                answersDiv.style.display = "block";
+            } else {
+                answersDiv.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

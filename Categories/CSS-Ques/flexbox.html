@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Techniques</title>
+    <link rel="stylesheet" href="../Questions.css">
+</head>
+<body>
+    <div class="BOX2"></div>
+    <h1>Flexbox Techniques</h1>
+    <hr class="hr">
+    <div id="timer" class="timer">🕐⏳Time Left: 100s</div>
+    <hr>
+    <br>
+    <form id="quiz">
+        <b>Q.1 What does 'flex-direction: row;' do?</b>
+        <ol type="A">
+            <li><input type="radio" name="q1" value="A">Stacks flex items vertically</li>
+            <li><input type="radio" name="q1" value="B">Aligns flex items horizontally</li>
+            <li><input type="radio" name="q1" value="C">Wraps items into multiple lines</li>
+            <li><input type="radio" name="q1" value="D">Centers items inside the container</li>
+        </ol><br>
+
+        <b>Q.2 Which property allows flex items to wrap onto multiple lines?</b>
+        <ol type="A">
+            <li><input type="radio" name="q2" value="A">flex-wrap</li>
+            <li><input type="radio" name="q2" value="B">flex-flow</li>
+            <li><input type="radio" name="q2" value="C">align-wrap</li>
+            <li><input type="radio" name="q2" value="D">justify-wrap</li>
+        </ol><br>
+
+        <b>Q.3 Which property controls the alignment along the main axis?</b>
+        <ol type="A">
+            <li><input type="radio" name="q3" value="A">align-items</li>
+            <li><input type="radio" name="q3" value="B">justify-content</li>
+            <li><input type="radio" name="q3" value="C">flex-align</li>
+            <li><input type="radio" name="q3" value="D">flex-direction</li>
+        </ol><br>
+
+        <b>Q.4 What is the default value of flex-direction?</b>
+        <ol type="A">
+            <li><input type="radio" name="q4" value="A">row</li>
+            <li><input type="radio" name="q4" value="B">column</li>
+            <li><input type="radio" name="q4" value="C">row-reverse</li>
+            <li><input type="radio" name="q4" value="D">column-reverse</li>
+        </ol><br>
+
+        <b>Q.5 Which property aligns items along the cross axis?</b>
+        <ol type="A">
+            <li><input type="radio" name="q5" value="A">justify-content</li>
+            <li><input type="radio" name="q5" value="B">align-items</li>
+            <li><input type="radio" name="q5" value="C">flex-wrap</li>
+            <li><input type="radio" name="q5" value="D">flex-direction</li>
+        </ol><br>
+
+        <b>Q.6 Which value of justify-content centers items horizontally?</b>
+        <ol type="A">
+            <li><input type="radio" name="q6" value="A">center</li>
+            <li><input type="radio" name="q6" value="B">flex-start</li>
+            <li><input type="radio" name="q6" value="C">flex-end</li>
+            <li><input type="radio" name="q6" value="D">space-between</li>
+        </ol><br>
+
+        <b>Q.7 What does 'flex-grow' control?</b>
+        <ol type="A">
+            <li><input type="radio" name="q7" value="A">The shrinking of items</li>
+            <li><input type="radio" name="q7" value="B">The initial size of items</li>
+            <li><input type="radio" name="q7" value="C">The ability of an item to grow</li>
+            <li><input type="radio" name="q7" value="D">The wrapping of items</li>
+        </ol><br>
+
+        <b>Q.8 Which shorthand property sets flex-grow, flex-shrink, and flex-basis?</b>
+        <ol type="A">
+            <li><input type="radio" name="q8" value="A">flex</li>
+            <li><input type="radio" name="q8" value="B">flex-wrap</li>
+            <li><input type="radio" name="q8" value="C">flex-flow</li>
+            <li><input type="radio" name="q8" value="D">flex-direction</li>
+        </ol><br>
+
+        <b>Q.9 How can you reverse the order of flex items horizontally?</b>
+        <ol type="A">
+            <li><input type="radio" name="q9" value="A">flex-direction: row;</li>
+            <li><input type="radio" name="q9" value="B">flex-direction: column-reverse;</li>
+            <li><input type="radio" name="q9" value="C">flex-direction: row-reverse;</li>
+            <li><input type="radio" name="q9" value="D">order: reverse;</li>
+        </ol><br>
+
+        <b>Q.10 Which CSS property changes the order of a specific flex item?</b>
+        <ol type="A">
+            <li><input type="radio" name="q10" value="A">flex-order</li>
+            <li><input type="radio" name="q10" value="B">order</li>
+            <li><input type="radio" name="q10" value="C">z-index</li>
+            <li><input type="radio" name="q10" value="D">item-order</li>
+        </ol><br>
+
+        <div id="result"></div>
+        <br>
+        <button type="button" class="button">
+            <a href="../topics.html">BACK</a>
+        </button>
+        <button type="button" id="submitButton" class="button" onclick="submitQuiz()">SUBMIT</button>
+        <button type="button" id="checkAnswerButton" class="button" onclick="showAnswers()" style="display:none;">Check Answers</button>
+    </form>
+
+    <div id="answers" style="display:none; margin-top: 20px;">
+        <p><b>Correct Answers:</b></p>
+        <p><b>Q1:</b> B - Aligns flex items horizontally</p>
+        <p><b>Q2:</b> A - flex-wrap</p>
+        <p><b>Q3:</b> B - justify-content</p>
+        <p><b>Q4:</b> A - row</p>
+        <p><b>Q5:</b> B - align-items</p>
+        <p><b>Q6:</b> A - center</p>
+        <p><b>Q7:</b> C - The ability of an item to grow</p>
+        <p><b>Q8:</b> A - flex</p>
+        <p><b>Q9:</b> C - flex-direction: row-reverse;</p>
+        <p><b>Q10:</b> B - order</p>
+    </div>
+
+    <script>
+        let timeLeft = 100;
+        const timerElement = document.getElementById("timer");
+        const resultElement = document.getElementById("result");
+        const quizForm = document.getElementById("quiz");
+
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                submitQuiz(); 
+            } else {
+                timerElement.textContent = `🕐⏳Time Left: ${timeLeft}s`;
+                timeLeft -= 1;
+            }
+        }, 1000);
+
+        function submitQuiz() {
+            clearInterval(timer); 
+            let score = 0;
+            const answers = {
+                q1: "B",
+                q2: "A",
+                q3: "B",
+                q4: "A",
+                q5: "B",
+                q6: "A",
+                q7: "C",
+                q8: "A",
+                q9: "C",
+                q10: "B"
+            };
+
+            for (const [question, correctAnswer] of Object.entries(answers)) {
+                const userAnswer = Array.from(quizForm.elements[question]).find(r => r.checked)?.value;
+                if (userAnswer === correctAnswer) {
+                    score += 1;
+                }
+            }
+
+            resultElement.textContent = `🥇🏆Your score: ${score} / ${Object.keys(answers).length}`;
+
+            document.getElementById('submitButton').style.display = 'none';
+            document.getElementById('checkAnswerButton').style.display = 'inline';
+        }
+
+        function showAnswers() {
+            const answersDiv = document.getElementById("answers");
+            if (answersDiv.style.display === "none") {
+                answersDiv.style.display = "block";
+            } else {
+                answersDiv.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

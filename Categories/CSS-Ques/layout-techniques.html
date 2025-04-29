@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Techniques</title>
+    <link rel="stylesheet" href="../Questions.css">
+</head>
+<body>
+    <div class="BOX2"></div>
+    <h1>Layout Techniques</h1>
+    <hr class="hr">
+    <div id="timer" class="timer">🕐⏳Time Left: 100s</div>
+    <hr>
+    <br>
+    <form id="quiz">
+        <b>Q.1 What are the differences between Flexbox and CSS Grid?</b>
+        <ol type="A">
+            <li><input type="radio" name="q1" value="A">Flexbox is for one-dimensional layouts, Grid is for two-dimensional</li>
+            <li><input type="radio" name="q1" value="B">Flexbox can only be used in horizontal layouts</li>
+            <li><input type="radio" name="q1" value="C">CSS Grid is older than Flexbox</li>
+            <li><input type="radio" name="q1" value="D">There are no differences</li>
+        </ol><br>
+
+        <b>Q.2 How do you create a simple two-column layout using Flexbox?</b>
+        <ol type="A">
+            <li><input type="radio" name="q2" value="A">display: grid;</li>
+            <li><input type="radio" name="q2" value="B">display: flex;</li>
+            <li><input type="radio" name="q2" value="C">float:left;</li>
+            <li><input type="radio" name="q2" value="D">display:block;</li>
+        </ol><br>
+
+        <b>Q.3 What property is used to create a grid layout in CSS?</b>
+        <ol type="A">
+            <li><input type="radio" name="q3" value="A">display:grid;</li>
+            <li><input type="radio" name="q3" value="B">grid-template-columns;</li>
+            <li><input type="radio" name="q3" value="C">flex:grid;</li>
+            <li><input type="radio" name="q3" value="D">layout:grid;</li>
+        </ol><br>
+
+        <b>Q.4 How do you control the spacing between grid items?</b>
+        <ol type="A">
+            <li><input type="radio" name="q4" value="A">grid-gap;</li>
+            <li><input type="radio" name="q4" value="B">gap;</li>
+            <li><input type="radio" name="q4" value="C">spacing;</li>
+            <li><input type="radio" name="q4" value="D">padding;</li>
+        </ol><br>
+
+        <b>Q.5 What is the purpose of the position property in CSS?</b>
+        <ol type="A">
+            <li><input type="radio" name="q5" value="A">To define the size of an element</li>
+            <li><input type="radio" name="q5" value="B">To set the stacking order of elements</li>
+            <li><input type="radio" name="q5" value="C">To control the positioning of an element on the page</li>
+            <li><input type="radio" name="q5" value="D">To style an element's border</li>
+        </ol><br>
+
+        <b>Q.6 How can you create a sticky element using CSS?</b>
+        <ol type="A">
+            <li><input type="radio" name="q6" value="A">position: sticky;</li>
+            <li><input type="radio" name="q6" value="B">position: sticky;</li>
+            <li><input type="radio" name="q6" value="C">display: sticky;</li>
+            <li><input type="radio" name="q6" value="D">float: sticky;</li>
+        </ol><br>
+
+        <b>Q.7 What does the z-index property do?</b>
+        <ol type="A">
+            <li><input type="radio" name="q7" value="A">Sets the visibility of an element</li>
+            <li><input type="radio" name="q7" value="B">Determines the order of overlapping elements</li>
+            <li><input type="radio" name="q7" value="C">Changes the opacity of an element</li>
+            <li><input type="radio" name="q7" value="D">Alters the color of an element</li>
+        </ol><br>
+
+        <b>Q.8 How can you create responsive layouts with media queries?</b>
+        <ol type="A">
+            <li><input type="radio" name="q8" value="A">By using @media rules</li>
+            <li><input type="radio" name="q8" value="B">By using !important</li>
+            <li><input type="radio" name="q8" value="C">By using flex-wrap</li>
+            <li><input type="radio" name="q8" value="D">By using float</li>
+        </ol><br>
+
+        <b>Q.9 What are CSS floats?</b>
+        <ol type="A">
+            <li><input type="radio" name="q9" value="A">A method for creating fixed positioning</li>
+            <li><input type="radio" name="q9" value="B">A way to allow text to wrap around images</li>
+            <li><input type="radio" name="q9" value="C">Technique for vertical centering</li>
+            <li><input type="radio" name="q9" value="D">A way to change an element's color</li>
+        </ol><br>
+
+        <b>Q.10 How do you clear floats in CSS?</b>
+        <ol type="A">
+            <li><input type="radio" name="q10" value="A">clear:both</li>
+            <li><input type="radio" name="q10" value="B">float: none;</li>
+            <li><input type="radio" name="q10" value="C">clearfix;</li>
+            <li><input type="radio" name="q10" value="D">overflow: hidden;</li>
+        </ol><br>
+
+        <div id="result"></div>
+        <br>
+        <button type="button" class="button">
+            <a href="../topics.html">BACK</a>
+        </button>
+        <button type="button" id="submitButton" class="button" onclick="submitQuiz()">SUBMIT</button>
+        <button type="button" id="checkAnswerButton" class="button" onclick="showAnswers()" style="display:none;">Check Answers</button>
+    </form>
+
+    <div id="answers" style="display:none; margin-top: 20px;">
+        <p><b>Correct Answers:</b></p>
+        <p><b>Q1:</b> A - Flexbox is for one-dimensional layouts, Grid is for two-dimensional</p>
+        <p><b>Q2:</b> B - display: flex;</p>
+        <p><b>Q3:</b> A - display: grid;</p>
+        <p><b>Q4:</b> B - gap;</p>
+        <p><b>Q5:</b> C - To control the positioning of an element on the page</p>
+        <p><b>Q6:</b> A - position: sticky;</p>
+        <p><b>Q7:</b> B - Determines the order of overlapping elements</p>
+        <p><b>Q8:</b> A - By using @media rules</p>
+        <p><b>Q9:</b> B - A way to allow text to wrap around images</p>
+        <p><b>Q10:</b> A - clear: both</p>
+    </div>
+
+    <script>
+        let timeLeft = 100;
+        const timerElement = document.getElementById("timer");
+        const resultElement = document.getElementById("result");
+        const quizForm = document.getElementById("quiz");
+
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                submitQuiz(); 
+            } else {
+                timerElement.textContent = `🕐⏳Time Left: ${timeLeft}s`;
+                timeLeft -= 1;
+            }
+        }, 1000);
+
+        function submitQuiz() {
+            clearInterval(timer); 
+            let score = 0;
+            const answers = {
+                q1: "A",
+                q2: "B",
+                q3: "A",
+                q4: "B",
+                q5: "C",
+                q6: "A",
+                q7: "B",
+                q8: "A",
+                q9: "B",
+                q10: "A"
+            };
+
+            for (const [question, correctAnswer] of Object.entries(answers)) {
+                const userAnswer = Array.from(quizForm.elements[question]).find(r => r.checked)?.value;
+                if (userAnswer === correctAnswer) {
+                    score += 1;
+                }
+            }
+
+            resultElement.textContent = `🥇🏆Your score: ${score} / ${Object.keys(answers).length}`;
+
+            // Hide the submit button and show the check answer button
+            document.getElementById('submitButton').style.display = 'none';
+            document.getElementById('checkAnswerButton').style.display = 'inline';
+        }
+
+        function showAnswers() {
+            const answersDiv = document.getElementById("answers");
+            if (answersDiv.style.display === "none") {
+                answersDiv.style.display = "block";
+            } else {
+                answersDiv.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

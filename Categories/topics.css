@@ -1,0 +1,82 @@
+body {
+    background: url('book-background.jpg') no-repeat center center fixed;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    font-size: xx-large;
+}
+
+.container {
+    margin-top: 90px;
+    background-color: rgba(255, 255, 255, 0.3);
+    /* backdrop-filter: blur(10px); */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+  
+
+.category-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.category-item {
+    flex: 0 0 auto;
+    background-color: rgba(232, 156, 14, 0.763);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.category-item:hover {
+    background-color: rgba(217, 145, 10, 0.763);
+    transform: scale(1.05);
+}
+  
+.category-item.selected {
+    background-color: #2196F3;
+}
+
+button {
+    text-decoration: none;
+    background-color: #7da190; /* Soft sage green */
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+  
+button:hover {
+    background-color: #7da190; /* Slightly darker on hover */
+    transform: scale(1.1);
+}
+  
+  /* Hide scrollbar */
+.category-scroll::-webkit-scrollbar {
+    display: none;
+}
+  
+.category-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

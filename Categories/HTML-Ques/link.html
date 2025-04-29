@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINK ques</title>
+    <link rel="stylesheet" href="../Questions.css">
+
+</head>
+
+<body>
+    <div class="BOX2"></div>
+    <h1>LINK</h1>
+    <hr class="hr">
+    <div id="timer" class="timer">🕐⏳Time Left: 100s</div>
+    <hr>
+    <br>
+    <form id="quiz">
+
+        <b>Q.1 Which one of the following tag is used for creating a hyperlink?</b>
+        <ol type="A">
+            <li><input type="radio" name="q1" value="A">&lt;link&gt;</li>
+            <li><input type="radio" name="q1" value="B">&lt;hyperlink&gt;</li>
+            <li><input type="radio" name="q1" value="C">&lt;a&gt;</li>
+            <li><input type="radio" name="q1" value="D">&lt;title&gt;</li>
+        </ol><br>
+        <b>Q.2 Which attribute is used to give destination address in <a> tag of HTML?</b>
+        <ol type="A">
+            <li><input type="radio" name="q2" value="A">href</li>
+            <li><input type="radio" name="q2" value="B">type</li>
+            <li><input type="radio" name="q2" value="C">address</li>
+            <li><input type="radio" name="q2" value="D">link</li>
+        </ol><br>
+        <b>Q.3 Choose the correct option.</b>
+        <ol type="A">
+            <li><input type="radio" name="q3" value="A">destination address is specified as value of href between and tag.</li>
+            <li><input type="radio" name="q3" value="B">address specified as value of href in HTML have to be absolute.</li>
+            <li><input type="radio" name="q3" value="C">address specified as value of href in HTML have to be relative.</li>
+            <li><input type="radio" name="q3" value="D">address specified as value of href in HTML can be absolute or relative.</li>
+        </ol><br>
+        <b>Q.4 Which one of the following value of target attribute opens the linked url in a new tab?</b>
+        <ol type="A">
+            <li><input type="radio" name="q4" value="A">_self</li>
+            <li><input type="radio" name="q4" value="B">_blank</li>
+            <li><input type="radio" name="q4" value="C">_top</li>
+            <li><input type="radio" name="q4" value="D">_parent</li>
+        </ol><br>
+        <b>Q.5 What will the browser display for the above HTML code? <br>&lt;a href="home.php"&gt;Go to Home Page&lt;/a&gt;</b>
+        <ol type="A">
+            <li><input type="radio" name="q5" value="A">It will display the entire line as it is.</li>
+            <li><input type="radio" name="q5" value="B">It will display- Go to Home Page</li>
+            <li><input type="radio" name="q5" value="C">It will display- Go to Home Page(link)</li>
+            <li><input type="radio" name="q5" value="D">First it will display home.php, and upon clicking it, it will display Go to Home Page.(link)</li>
+        </ol><br>
+        <b>Q.6 What is the default value of target in &lt;a&gt; tag of HTML?</b>
+        <ol type="A">
+            <li><input type="radio" name="q6" value="A">_self</li>
+            <li><input type="radio" name="q6" value="B">_blank</li>
+            <li><input type="radio" name="q6" value="C">_top</li>
+            <li><input type="radio" name="q6" value="D">_parent</li>
+        </ol><br>
+        <b>Q.7 By default, an unvisited link in HTML is-</b>
+        <ol type="A">
+            <li><input type="radio" name="q7" value="A">purple and underlined.</li>
+            <li><input type="radio" name="q7" value="B">blue and underlined.</li>
+            <li><input type="radio" name="q7" value="C">red and underlined.</li>
+            <li><input type="radio" name="q7" value="D">blue and italics. </li>
+        </ol><br>
+        <b>Q.8 By default, the link in HTML is red and underlined when the link is-</b>
+        <ol type="A">
+            <li><input type="radio" name="q8" value="A">visited</li>
+            <li><input type="radio" name="q8" value="B">unvisited</li>
+            <li><input type="radio" name="q8" value="C">Active</li>
+            <li><input type="radio" name="q8" value="D">It is red and underlined</li>
+        </ol><br>
+        <b>Q.9 By default, a visited link in HTML is-</b>
+        <ol type="A">
+            <li><input type="radio" name="q9" value="A">purple and underlined.</li>
+            <li><input type="radio" name="q9" value="B">blue and underlined.</li>
+            <li><input type="radio" name="q9" value="C">red and underlined.</li>
+            <li><input type="radio" name="q9" value="D">blue and italics. </li>
+        </ol><br>
+        <b>Q.10 Default style of link can be changed by-</b>
+        <ol type="A">
+            <li><input type="radio" name="q10" value="A">javascript</li>
+            <li><input type="radio" name="q10" value="B">css</li>
+            <li><input type="radio" name="q10" value="C">php</li>
+            <li><input type="radio" name="q10" value="D">Cannot be changed at all.</li>
+        </ol><br>
+
+        <div id="result"></div>
+
+        <button type="button" class="button">
+            <a href="../topics.html">BACK</a>
+        </button>
+        <button type="button" class="button" id="submit-button" onclick="submitQuiz()">SUBMIT</button>
+        <button type="button" class="button" id="check-answer-button" style="display:none;" onclick="showAnswers()">Check Answer</button>
+
+    </form>
+
+    <div id="answers" style="display: none; margin-top:20px ;">
+        <p><b>Correct Answers:</b></p>
+        <p><b>Q.1:</b>C - &lt;a&gt;</p>
+        <p><b>Q.2:</b>A - href</p>
+        <p><b>Q.3:</b>D - The address is specified as the value of href inside <a> tag of HTML and it can be either absolute or relative.</p>
+        <p><b>Q.4:</b>B - &lt;a href="link url" target="_blank"&gt; opens the link url in a new tab.</p>
+        <p><b>Q.5:</b>C - It creates a link as Go to Home Page, upon clicking of which it redirects to home.php page.</p>
+        <p><b>Q.6:</b>A - The default value of the target is _self i.e. by default the linked URL will open in the same tab.</p>
+        <p><b>Q.7:</b>B - Link in HTML can be visited, unvisited or active. An unvisited link in HTML is by default blue and underlined.</p>
+        <p><b>Q.8:</b>C - The active link becomes red and underlined in HTML.</p>
+        <p><b>Q.9:</b>A - Link in HTML can be visited, unvisited or active. A visited link in HTML is by default purple and underlined.</p>
+        <p><b>Q.10:</b>B - Using CSS, we can change the default styling of links.</p>
+    </div>
+
+    <script>
+        let timeLeft = 100;
+        const timerElement = document.getElementById("timer");
+        const resultElement = document.getElementById("result");
+        const quizForm = document.getElementById("quiz");
+        const submitButton = document.getElementById("submit-button");
+        const checkAnswerButton = document.getElementById("check-answer-button");
+
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                submitQuiz();
+            } else {
+                timerElement.textContent = `🕐⏳Time Left: ${timeLeft}s`;
+                timeLeft -= 1;
+            }
+        }, 1000);
+
+        function submitQuiz() {
+            clearInterval(timer);
+            let score = 0;
+            const answers = {
+                q1: "C",
+                q2: "A",
+                q3: "D",
+                q4: "B",
+                q5: "C",
+                q6: "A",
+                q7: "B",
+                q8: "C",
+                q9: "A",
+                q10: "B"
+            };
+
+            for (const [question, correctAnswer] of Object.entries(answers)) {
+                const userAnswer = quizForm.elements[question].value;
+                if (userAnswer === correctAnswer) {
+                    score += 1;
+                }
+            }
+
+            resultElement.textContent = `🥇🏆Your score: ${score} / ${Object.keys(answers).length}`;
+
+            // Hide the submit button and show the "Check Answer" button
+            submitButton.style.display = "none";
+            checkAnswerButton.style.display = "block";
+        }
+
+        function showAnswers() {
+            const answersDiv = document.getElementById("answers");
+            if (answersDiv.style.display === "none") {
+                answersDiv.style.display = "block";
+            } else {
+                answersDiv.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

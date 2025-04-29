@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics Quiz</title>
+    <link rel="stylesheet" href="../Questions.css">
+</head>
+
+<body>
+    <div class="BOX1"></div>
+    <h1>BASICS</h1>
+    <hr class="hr">
+
+    <div class="timer" id="timer">🕐⏳Time Left: 100s</div>
+    <hr>
+    <br>
+    <form id="quiz">
+        <b>Q.1 What does HTML stand for?</b>
+        <ol type="A">
+            <li><input type="radio" name="q1" value="A">Hyperlinks and Text Markup language</li>
+            <li><input type="radio" name="q1" value="B">Hypertext Markup Language</li>
+            <li><input type="radio" name="q1" value="C">Home Tool Markup Language</li>
+        </ol><br>
+
+        <b>Q.2 In which year HTML was invented?</b>
+        <ol type="A">
+            <li><input type="radio" name="q2" value="A">1993</li>
+            <li><input type="radio" name="q2" value="B">1992</li>
+            <li><input type="radio" name="q2" value="C">1991</li>
+        </ol><br>
+
+        <b>Q.3 Which of the following is not correct with reference to HTML?</b>
+        <ol type="A">
+            <li><input type="radio" name="q3" value="A">DOCTYPE refers to document type</li>
+            <li><input type="radio" name="q3" value="B">DOCTYPE is not case sensitive.</li>
+            <li><input type="radio" name="q3" value="C">NONE of these.</li>
+        </ol><br>
+
+        <b>Q.4 HTML tags are represented within</b>
+        <ol type="A">
+            <li><input type="radio" name="q4" value="A">&lt;&gt;</li>
+            <li><input type="radio" name="q4" value="B">[]</li>
+            <li><input type="radio" name="q4" value="C">()</li>
+        </ol><br>
+
+        <b>Q.5 Drag and drop feature is supported in</b>
+        <ol type="A">
+            <li><input type="radio" name="q5" value="A">HTML5</li>
+            <li><input type="radio" name="q5" value="B">HTML4</li>
+            <li><input type="radio" name="q5" value="C">both A and B</li>
+        </ol><br>
+
+        <b>Q.6 What if one does not use the doctype in the starting of HTML document?</b>
+        <ol type="A">
+            <li><input type="radio" name="q6" value="A">Browser finds the document in quirky mode</li>
+            <li><input type="radio" name="q6" value="B">Browser finds a document in standard mode</li>
+            <li><input type="radio" name="q6" value="C">Browser stops working</li>
+            <li><input type="radio" name="q6" value="D">Browser crashes after showing the page</li>
+        </ol><br>
+
+        <b>Q.7 Which element is designed to wrap a single piece of information?</b>
+        <ol type="A">
+            <li><input type="radio" name="q7" value="A">time</li>
+            <li><input type="radio" name="q7" value="B">nav</li>
+            <li><input type="radio" name="q7" value="C">footer</li>
+            <li><input type="radio" name="q7" value="D">header</li>
+        </ol><br>
+
+        <b>Q.8 The __________ attribute sets the text direction as related to the lang attribute.</b>
+        <ol type="A">
+            <li><input type="radio" name="q8" value="A">lang</li>
+            <li><input type="radio" name="q8" value="B">sub</li>
+            <li><input type="radio" name="q8" value="C">dir</li>
+            <li><input type="radio" name="q8" value="D">ds</li>
+        </ol><br>
+
+        <b>Q.9 To create HTML page, you need</b>
+        <ol type="A">
+            <li><input type="radio" name="q9" value="A">web browser</li>
+            <li><input type="radio" name="q9" value="B">text editor</li>
+            <li><input type="radio" name="q9" value="C">both A and B</li>
+            <li><input type="radio" name="q9" value="D">None of the above</li>
+        </ol><br>
+
+        <b>Q.10 Who is Known as the father of World Wide Web (WWW)?</b>
+        <ol type="A">
+            <li><input type="radio" name="q10" value="A">Robert Cailliau</li>
+            <li><input type="radio" name="q10" value="B">Tim Thompson</li>
+            <li><input type="radio" name="q10" value="C">Charles Darwin</li>
+            <li><input type="radio" name="q10" value="D">Tim Berners-Lee</li>
+        </ol><br>
+
+        <div id="result"></div>
+        <button type="button" class="button">
+            <a href="../topics.html">BACK</a></button>
+
+        <button type="button" class="button" id="submitButton" onclick="submitQuiz()">Submit</button>
+        <button type="button" class="button" id="checkAnswerButton" onclick="showAnswers()" style="display:none;">Check Answer</button>
+    </form>
+
+    <!-- Hidden section to display correct answers -->
+    <div id="answers" style="display:none; margin-top: 20px;">
+        <p><b>Correct Answers:</b></p>
+        <p><b>Q1:</b> B - Hypertext Markup Language</p>
+        <p><b>Q2:</b> A - 1993</p>
+        <p><b>Q3:</b> C - NONE of these</p>
+        <p><b>Q4:</b> A - &lt;&gt;</p>
+        <p><b>Q5:</b> A - HTML5</p>
+        <p><b>Q6:</b> A - Browser finds the document in quirky mode</p>
+        <p><b>Q7:</b> A - time</p>
+        <p><b>Q8:</b> C - dir</p>
+        <p><b>Q9:</b> C - both A and B</p>
+        <p><b>Q10:</b> D - Tim Berners-Lee</p>
+    </div>
+
+    <script>
+        let timeLeft = 100;
+        const timerElement = document.getElementById("timer");
+        const resultElement = document.getElementById("result");
+        const quizForm = document.getElementById("quiz");
+        const buttonContainer = document.getElementById("button-container");
+
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                submitQuiz();
+            } else {
+                timerElement.textContent = `🕐⏳Time Left: ${timeLeft}s`;
+                timeLeft -= 1;
+            }
+        }, 1000);
+
+        function submitQuiz() {
+            clearInterval(timer);
+            let score = 0;
+            const answers = {
+                q1: "B",
+                q2: "A",
+                q3: "C",
+                q4: "A",
+                q5: "A",
+                q6: "A",
+                q7: "A",
+                q8: "C",
+                q9: "C",
+                q10: "D"
+            };
+
+            for (const [question, correctAnswer] of Object.entries(answers)) {
+                const userAnswer = quizForm.elements[question].value;
+                if (userAnswer === correctAnswer) {
+                    score += 1;
+                }
+            }
+
+            resultElement.textContent = `🥇🏆Your score: ${score} / ${Object.keys(answers).length}`;
+
+            // Replace the Submit button with Check Answer button
+            buttonContainer.innerHTML = '';
+            const checkAnswerButton = document.createElement("button");
+            checkAnswerButton.type = "button";
+            checkAnswerButton.className = "button";
+            checkAnswerButton.textContent = "Check Answer";
+            checkAnswerButton.onclick = hiddenButton;
+            buttonContainer.appendChild(checkAnswerButton);
+        }
+
+        function hiddenButton() {
+            const answersDiv = document.getElementById("answers");
+            answersDiv.style.display = answersDiv.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM ques</title>
+    <link rel="stylesheet" href="../Questions.css">
+</head>
+
+<body>
+    <div class="BOX2">
+        <h1>FORM</h1>
+        <hr class="hr">
+        <div class="timer" id="timer">🕐⏳Time Left: 100s</div>
+        <hr>
+        <br>
+        <form id="quiz">
+            <b>Q.1 Choose the correct option.</b>
+            <ol type="A">
+                <li><input type="radio" name="q1" value="A">HTML form elements are used for taking user input.</li>
+                <li><input type="radio" name="q1" value="B"> HTML form elements are defined inside &lt;for&gt; tag</li>
+                <li><input type="radio" name="q1" value="C">HTML form elements can be of different types.</li>
+                <li><input type="radio" name="q1" value="D">All of these</li>
+            </ol><br>
+
+            <b>Q.2 Which one of the following is a form element?</b>
+            <ol type="A">
+                <li><input type="radio" name="q2" value="A">text box.</li>
+                <li><input type="radio" name="q2" value="B"> radio button.</li>
+                <li><input type="radio" name="q2" value="C">submit button</li>
+                <li><input type="radio" name="q2" value="D">All of these.</li>
+            </ol><br>
+
+            <b>Q.3 Which one of the following is incorrect?</b>
+            <ol type="A">
+                <li><input type="radio" name="q3" value="A"> &lt;label&gt; tag in HTML is used for creating a tag for form elements.</li>
+                <li><input type="radio" name="q3" value="B"> &lt;label&gt; can be used to increase the clickable area of buttons</li>
+                <li><input type="radio" name="q3" value="C">id attribute is used with &lt;label&gt; to increase the clickable area of form elements</li>
+                <li><input type="radio" name="q3" value="D">NONE OF THE ABOVE.</li>
+            </ol><br>
+
+            <b>Q.4 Choose the incorrect option.</b>
+            <ol type="A">
+                <li><input type="radio" name="q4" value="A">radio button allows to choose only one option from the given options.</li>
+                <li><input type="radio" name="q4" value="B">default option can be chosen using attribute "selected" in radio button</li>
+                <li><input type="radio" name="q4" value="C">default option can be chosen using attribute "checked" in radio button</li>
+                <li><input type="radio" name="q4" value="D">checkbox allows to choose one or more than one options from the given options.</li>
+            </ol><br>
+
+            <b>Q.5 Choose the incorrect option.</b>
+            <ol type="A">
+                <li><input type="radio" name="q5" value="A">action attribute is used inside starting tag of form.</li>
+                <li><input type="radio" name="q5" value="B">With the use of action, we can redirect to a page once submit button is clicked.</li>
+                <li><input type="radio" name="q5" value="C">. &lt;form action:"home.php"&gt; redirects to the page home.php</li>
+                <li><input type="radio" name="q5" value="D">NONE OF THE ABOVE</li>
+            </ol><br>
+
+            <b>Q.6 Choose the correct option.</b>
+            <ol type="A">
+                <li><input type="radio" name="q6" value="A">Use of method attribute determines by which method the datas in the form will be submitted.</li>
+                <li><input type="radio" name="q6" value="B">Method can be POST or GET</li>
+                <li><input type="radio" name="q6" value="C">Default method in HTML is GET</li>
+                <li><input type="radio" name="q6" value="D">All of the above</li>
+            </ol><br>
+
+            <b>Q.7 Which one of the following does not hold true regarding GET method in HTML?</b>
+            <ol type="A">
+                <li><input type="radio" name="q7" value="A">Use of GET method in HTML is more secured.</li>
+                <li><input type="radio" name="q7" value="B">Use of GET method enables us to bookmark the page.</li>
+                <li><input type="radio" name="q7" value="C">GET has size limitation.</li>
+                <li><input type="radio" name="q7" value="D">GET has size limitation.</li>
+            </ol><br>
+
+            <b>Q.8 Which one of the following does not hold true regarding POST method in HTML?</b>
+            <ol type="A">
+                <li><input type="radio" name="q8" value="A">Use of POST method in HTML is more secured.</li>
+                <li><input type="radio" name="q8" value="B">Use of POST method enables us to bookmark the page.</li>
+                <li><input type="radio" name="q8" value="C"> POST has no size limitation.</li>
+                <li><input type="radio" name="q8" value="D">None of these.</li>
+            </ol><br>
+
+            <b>Q.9 Which of the following tag is used for drop down list?</b>
+            <ol type="A">
+                <li><input type="radio" name="q9" value="A">&lt;select&gt;</li>
+                <li><input type="radio" name="q9" value="B">&lt;text&gt;</li>
+                <li><input type="radio" name="q9" value="C">&lt;dropdown&gt;</li>
+                <li><input type="radio" name="q9" value="D">&lt;textarea&gt;</li>
+            </ol><br>
+
+            <b>Q.10 How more than one option can be selected in drop down?</b>
+            <ol type="A">
+                <li><input type="radio" name="q10" value="A">Use of multiple attribute inside &lt;option&gt; tag</li>
+                <li><input type="radio" name="q10" value="B">Use of multiple attribute inside &lt;select&gt; tag</li>
+                <li><input type="radio" name="q10" value="C">Use of multiple attribute inside &lt;text&gt; tag</li>
+                <li><input type="radio" name="q10" value="D">It is not possible to select more than one option in drop down.</li>
+            </ol><br>
+
+            <div id="result"></div>
+
+            <button type="button" class="button" id="backButton">
+                <a href="../topics.html">BACK</a>
+            </button>
+            <button type="button" class="button" id="submitButton" onclick="submitQuiz()">Submit</button>
+            <button type="button" class="button" id="checkAnswerButton" onclick="showAnswers()" style="display: none;">Check Answer</button>
+        </form>
+    </div>
+
+    <!-- Hidden section to display correct answers -->
+    <div id="answers" style="display:none; margin-top: 20px;">
+        <p><b>Correct Answers:</b></p>
+        <p><b>Q1:</b> D - All of these</p>
+        <p><b>Q2:</b> D - All of these</p>
+        <p><b>Q3:</b> C - id attribute is used with &lt;label&gt; to increase the clickable area of form elements</p>
+        <p><b>Q4:</b> B - default option can be chosen using attribute "selected" in radio button</p>
+        <p><b>Q5:</b> C - &lt;form action:"home.php"&gt; redirects to the page home.php</p>
+        <p><b>Q6:</b> D - All of the above</p>
+        <p><b>Q7:</b> A - Use of GET method in HTML is more secured.</p>
+        <p><b>Q8:</b> B - Use of POST method enables us to bookmark the page.</p>
+        <p><b>Q9:</b> A - &lt;select&gt;</p>
+        <p><b>Q10:</b> B - Use of multiple attribute inside &lt;select&gt; tag</p>
+    </div>
+
+    <script>
+        let timeLeft = 100;
+        const timerElement = document.getElementById("timer");
+        const resultElement = document.getElementById("result");
+        const quizForm = document.getElementById("quiz");
+        const submitButton = document.getElementById("submitButton");
+        const checkAnswerButton = document.getElementById("checkAnswerButton");
+
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                submitQuiz();
+            } else {
+                timerElement.textContent = `🕐⏳Time Left: ${timeLeft}s`;
+                timeLeft -= 1;
+            }
+        }, 1000);
+
+        // Function to submit the quiz and calculate score
+        function submitQuiz() {
+            clearInterval(timer);
+            let score = 0;
+            const answers = {
+                q1: "D",
+                q2: "D",
+                q3: "C",
+                q4: "B",
+                q5: "C",
+                q6: "D",
+                q7: "A",
+                q8: "B",
+                q9: "A",
+                q10: "B"
+            };
+
+            for (const [question, correctAnswer] of Object.entries(answers)) {
+                const userAnswer = quizForm.elements[question].value;
+                if (userAnswer === correctAnswer) {
+                    score += 1;
+                }
+            }
+
+            resultElement.textContent = `🥇🏆Your score: ${score} / ${Object.keys(answers).length}`;
+            submitButton.style.display = "none";  // Hide submit button
+            checkAnswerButton.style.display = "inline-block";  // Show check answer button
+        }
+
+        // Function to toggle showing correct answers
+        function showAnswers() {
+            const answersDiv = document.getElementById("answers");
+            if (answersDiv.style.display === "none") {
+                answersDiv.style.display = "block";  // Show answers
+            } else {
+                answersDiv.style.display = "none";   // Hide answers
+            }
+        }
+    </script>
+
+</body>
+
+</html>

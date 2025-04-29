@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <link rel="stylesheet" href="../Questions.css">
+</head>
+<body>
+    <div class="BOX2"></div>
+    <h1>Pseudo Elements</h1>
+    <hr class="hr">
+    <div id="timer" class="timer">🕐⏳Time Left: 100s</div>
+    <hr>
+    <br>
+    <form id="quiz">
+        <b>Q.1 Which syntax is used to target a pseudo-element?</b>
+        <ol type="A">
+            <li><input type="radio" name="q1" value="A">element::pseudo-element</li>
+            <li><input type="radio" name="q1" value="B">element:pseudo-element</li>
+            <li><input type="radio" name="q1" value="C">element > pseudo-element</li>
+            <li><input type="radio" name="q1" value="D">element pseudo-element</li>
+        </ol><br>
+
+        <b>Q.2 Which pseudo-element is used to insert content before an element?</b>
+        <ol type="A">
+            <li><input type="radio" name="q2" value="A">::before</li>
+            <li><input type="radio" name="q2" value="B">::first-line</li>
+            <li><input type="radio" name="q2" value="C">::after</li>
+            <li><input type="radio" name="q2" value="D">::marker</li>
+        </ol><br>
+
+        <b>Q.3 What pseudo-element targets the first letter of a block element?</b>
+        <ol type="A">
+            <li><input type="radio" name="q3" value="A">::first-letter</li>
+            <li><input type="radio" name="q3" value="B">::first-line</li>
+            <li><input type="radio" name="q3" value="C">::first</li>
+            <li><input type="radio" name="q3" value="D">::start-letter</li>
+        </ol><br>
+
+        <b>Q.4 Which pseudo-element allows styling the first line of a paragraph?</b>
+        <ol type="A">
+            <li><input type="radio" name="q4" value="A">::first-letter</li>
+            <li><input type="radio" name="q4" value="B">::text-line</li>
+            <li><input type="radio" name="q4" value="C">::first-line</li>
+            <li><input type="radio" name="q4" value="D">::line</li>
+        </ol><br>
+
+        <b>Q.5 Which property must be used with ::before or ::after?</b>
+        <ol type="A">
+            <li><input type="radio" name="q5" value="A">position</li>
+            <li><input type="radio" name="q5" value="B">display</li>
+            <li><input type="radio" name="q5" value="C">content</li>
+            <li><input type="radio" name="q5" value="D">visibility</li>
+        </ol><br>
+
+        <b>Q.6 What pseudo-element is used to style list item markers?</b>
+        <ol type="A">
+            <li><input type="radio" name="q6" value="A">::list-marker</li>
+            <li><input type="radio" name="q6" value="B">::bullet</li>
+            <li><input type="radio" name="q6" value="C">::marker</li>
+            <li><input type="radio" name="q6" value="D">::item-marker</li>
+        </ol><br>
+
+        <b>Q.7 What does the ::selection pseudo-element style?</b>
+        <ol type="A">
+            <li><input type="radio" name="q7" value="A">The selected text by user</li>
+            <li><input type="radio" name="q7" value="B">All input fields</li>
+            <li><input type="radio" name="q7" value="C">All headings</li>
+            <li><input type="radio" name="q7" value="D">Navigation menu</li>
+        </ol><br>
+
+        <b>Q.8 Can you animate pseudo-elements?</b>
+        <ol type="A">
+            <li><input type="radio" name="q8" value="A">Yes, using @keyframes</li>
+            <li><input type="radio" name="q8" value="B">No, they are static</li>
+            <li><input type="radio" name="q8" value="C">Only with JavaScript</li>
+            <li><input type="radio" name="q8" value="D">Only on hover</li>
+        </ol><br>
+
+        <b>Q.9 Which pseudo-element is best to highlight the first line of a news article?</b>
+        <ol type="A">
+            <li><input type="radio" name="q9" value="A">::before</li>
+            <li><input type="radio" name="q9" value="B">::first-letter</li>
+            <li><input type="radio" name="q9" value="C">::first-line</li>
+            <li><input type="radio" name="q9" value="D">::highlight</li>
+        </ol><br>
+
+        <b>Q.10 What is the correct way to use ::after to add text "New" after a heading?</b>
+        <ol type="A">
+            <li><input type="radio" name="q10" value="A">h1::after { text: "New"; }</li>
+            <li><input type="radio" name="q10" value="B">h1:after { content: "New"; }</li>
+            <li><input type="radio" name="q10" value="C">h1::after { content: "New"; }</li>
+            <li><input type="radio" name="q10" value="D">h1:after { text: "New"; }</li>
+        </ol><br>
+
+        <div id="result"></div>
+        <br>
+        <button type="button" class="button">
+            <a href="../topics.html">BACK</a>
+        </button>
+        <button type="button" id="submitButton" class="button" onclick="submitQuiz()">SUBMIT</button>
+        <button type="button" id="checkAnswerButton" class="button" onclick="showAnswers()" style="display:none;">Check Answers</button>
+    </form>
+
+    <div id="answers" style="display:none; margin-top: 20px;">
+        <p><b>Correct Answers:</b></p>
+        <p><b>Q1:</b> A - element::pseudo-element</p>
+        <p><b>Q2:</b> A - ::before</p>
+        <p><b>Q3:</b> A - ::first-letter</p>
+        <p><b>Q4:</b> C - ::first-line</p>
+        <p><b>Q5:</b> C - content</p>
+        <p><b>Q6:</b> C - ::marker</p>
+        <p><b>Q7:</b> A - The selected text by user</p>
+        <p><b>Q8:</b> A - Yes, using @keyframes</p>
+        <p><b>Q9:</b> C - ::first-line</p>
+        <p><b>Q10:</b> C - h1::after { content: "New"; }</p>
+    </div>
+
+    <script>
+        let timeLeft = 100;
+        const timerElement = document.getElementById("timer");
+        const resultElement = document.getElementById("result");
+        const quizForm = document.getElementById("quiz");
+
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                submitQuiz();
+            } else {
+                timerElement.textContent = `🕐⏳Time Left: ${timeLeft}s`;
+                timeLeft -= 1;
+            }
+        }, 1000);
+
+        function submitQuiz() {
+            clearInterval(timer);
+            let score = 0;
+            const answers = {
+                q1: "A",
+                q2: "A",
+                q3: "A",
+                q4: "C",
+                q5: "C",
+                q6: "C",
+                q7: "A",
+                q8: "A",
+                q9: "C",
+                q10: "C"
+            };
+
+            for (const [question, correctAnswer] of Object.entries(answers)) {
+                const userAnswer = Array.from(quizForm.elements[question]).find(r => r.checked)?.value;
+                if (userAnswer === correctAnswer) {
+                    score += 1;
+                }
+            }
+
+            resultElement.textContent = `🥇🏆Your score: ${score} / ${Object.keys(answers).length}`;
+
+            document.getElementById('submitButton').style.display = 'none';
+            document.getElementById('checkAnswerButton').style.display = 'inline';
+        }
+
+        function showAnswers() {
+            const answersDiv = document.getElementById("answers");
+            if (answersDiv.style.display === "none") {
+                answersDiv.style.display = "block";
+            } else {
+                answersDiv.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

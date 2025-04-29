@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIST Questions</title>
+    <link rel="stylesheet" href="../Questions.css">
+</head>
+
+<body>
+    <div class="BOX2"></div>
+    <h1>HTML List Quiz</h1>
+    <hr class="hr">
+    <div class="timer" id="timer" aria-live="polite">🕐⏳ Time Left: 100s</div>
+    <hr>
+    <br>
+    <form id="quiz">
+        <!-- Question 1 -->
+        <b>Q.1 Which one of the following is a type of lists that HTML supports?</b>
+        <ol type="A">
+            <li><input type="radio" name="q1" value="A"> Ordered list</li>
+            <li><input type="radio" name="q1" value="B"> Unordered list</li>
+            <li><input type="radio" name="q1" value="C"> Description list</li>
+            <li><input type="radio" name="q1" value="D"> All of the above</li>
+        </ol><br>
+
+        <!-- Question 2 -->
+        <b>Q.2 By which tag, an unordered list is represented?</b>
+        <ol type="A">
+            <li><input type="radio" name="q2" value="A">&lt;u&gt;</li>
+            <li><input type="radio" name="q2" value="B">&lt;l&gt;</li>
+            <li><input type="radio" name="q2" value="C">&lt;ul&gt;</li>
+            <li><input type="radio" name="q2" value="D">&lt;ol&gt;</li>
+        </ol><br>
+
+        <!-- Question 3 -->
+        <b>Q.3 By which tag, an ordered list is represented?</b>
+        <ol type="A">
+            <li><input type="radio" name="q3" value="A">&lt;u&gt;</li>
+            <li><input type="radio" name="q3" value="B">&lt;l&gt;</li>
+            <li><input type="radio" name="q3" value="C">&lt;ul&gt;</li>
+            <li><input type="radio" name="q3" value="D">&lt;ol&gt;</li>
+        </ol><br>
+
+        <!-- Question 4 -->
+        <b>Q.4 How can you change the style of list items to square in HTML?</b>
+        <ol type="A">
+            <li><input type="radio" name="q4" value="A">style="list-style-type:square;"</li>
+            <li><input type="radio" name="q4" value="B">style="list-style-type:circle;"</li>
+            <li><input type="radio" name="q4" value="C">style="list-style:square;"</li>
+            <li><input type="radio" name="q4" value="D">style="type:square;"</li>
+        </ol><br>
+
+        <!-- Question 5 -->
+        <b>Q.5 Which type of list is used to display a list of items using Roman numerals?</b>
+        <ol type="A">
+            <li><input type="radio" name="q5" value="A">type="1"</li>
+            <li><input type="radio" name="q5" value="B">type="a"</li>
+            <li><input type="radio" name="q5" value="C">type="i"</li>
+            <li><input type="radio" name="q5" value="D">type="I"</li>
+        </ol><br>
+
+        <!-- Question 6 -->
+        <b>Q.6 Which attribute is used to set the starting number for an ordered list?</b>
+        <ol type="A">
+            <li><input type="radio" name="q6" value="A">start="1"</li>
+            <li><input type="radio" name="q6" value="B">start="10"</li>
+            <li><input type="radio" name="q6" value="C">value="10"</li>
+            <li><input type="radio" name="q6" value="D">start="a"</li>
+        </ol><br>
+
+        <!-- Question 7 -->
+        <b>Q.7 Which elements are used to create a description list in HTML?</b>
+        <ol type="A">
+            <li><input type="radio" name="q7" value="A">&lt;dl&gt;, &lt;/dl&gt;</li>
+            <li><input type="radio" name="q7" value="B">&lt;dt&gt;, &lt;/dt&gt;, &lt;dd&gt;, &lt;/dd&gt;</li>
+            <li><input type="radio" name="q7" value="C">&lt;ul&gt;, &lt;/ul&gt;</li>
+            <li><input type="radio" name="q7" value="D">&lt;ol&gt;, &lt;/ol&gt;</li>
+        </ol><br>
+
+        <!-- Question 8 -->
+        <b>Q.8 Which tag can be used to make a list with no bullet points?</b>
+        <ol type="A">
+            <li><input type="radio" name="q8" value="A">&lt;ul style="list-style-type:none;"&gt;</li>
+            <li><input type="radio" name="q8" value="B">&lt;ol style="list-style-type:none;"&gt;</li>
+            <li><input type="radio" name="q8" value="C">&lt;ul style="list-style:none;"&gt;</li>
+            <li><input type="radio" name="q8" value="D">&lt;ol style="list-style:none;"&gt;</li>
+        </ol><br>
+
+        <!-- Question 9 -->
+        <b>Q.9 In an ordered list, what is the default start value?</b>
+        <ol type="A">
+            <li><input type="radio" name="q9" value="A">1</li>
+            <li><input type="radio" name="q9" value="B">0</li>
+            <li><input type="radio" name="q9" value="C">10</li>
+            <li><input type="radio" name="q9" value="D">None of the above</li>
+        </ol><br>
+
+        <!-- Question 10 -->
+        <b>Q.10 Which type of list marker is used in an unordered list by default?</b>
+        <ol type="A">
+            <li><input type="radio" name="q10" value="A">Circle</li>
+            <li><input type="radio" name="q10" value="B">Square</li>
+            <li><input type="radio" name="q10" value="C">Disc</li>
+            <li><input type="radio" name="q10" value="D">None</li>
+        </ol><br>
+
+        <div id="result"></div>
+
+        <button type="button" class="button">
+            <a href="../topics.html">BACK</a>
+        </button>
+
+        <button type="button" id="submitButton" class="button" onclick="submitQuiz()">Submit</button>
+        <button type="button" id="checkAnswerButton" class="button" onclick="showAnswers()" style="display:none;">Check Answer</button>
+    </form>
+
+    <!-- Correct Answers Section -->
+    <div id="answers" style="display: none; margin-top: 20px;">
+        <p><b>Correct Answers:</b></p>
+        <p><b>Q.1:</b> D - All of the above</p>
+        <p><b>Q.2:</b> C - &lt;ul&gt;</p>
+        <p><b>Q.3:</b> D - &lt;ol&gt;</p>
+        <p><b>Q.4:</b> A - style="list-style-type:square;"</p>
+        <p><b>Q.5:</b> C - type="i"</p>
+        <p><b>Q.6:</b> B - start="10"</p>
+        <p><b>Q.7:</b> B - &lt;dt&gt;, &lt;/dt&gt;, &lt;dd&gt;, &lt;/dd&gt;</p>
+        <p><b>Q.8:</b> A - &lt;ul style="list-style-type:none;"&gt;</p>
+        <p><b>Q.9:</b> A - 1</p>
+        <p><b>Q.10:</b> C - Disc</p>
+    </div>
+
+    <script>
+        let timeLeft = 100;
+        const timerElement = document.getElementById("timer");
+        const resultElement = document.getElementById("result");
+        const quizForm = document.getElementById("quiz");
+
+        // Timer function
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                submitQuiz();
+            } else {
+                timerElement.textContent = `🕐⏳ Time Left: ${timeLeft}s`;
+                timeLeft -= 1;
+            }
+        }, 1000);
+
+        // Submit quiz and calculate score
+        function submitQuiz() {
+            clearInterval(timer);
+            let score = 0;
+            const answers = {
+                q1: "D",
+                q2: "C",
+                q3: "D",
+                q4: "A",
+                q5: "C",
+                q6: "B",
+                q7: "B",
+                q8: "A",
+                q9: "A",
+                q10: "C"
+            };
+
+            for (const [question, correctAnswer] of Object.entries(answers)) {
+                const userAnswer = quizForm.elements[question] && quizForm.elements[question].value;
+                if (userAnswer === correctAnswer) {
+                    score += 1;
+                }
+            }
+
+            resultElement.textContent = `🥇🏆 Your score: ${score} / ${Object.keys(answers).length}`;
+            // Hide submit button and show check answer button
+            document.getElementById('submitButton').style.display = 'none';
+            document.getElementById('checkAnswerButton').style.display = 'inline';
+        }
+
+        // Toggle visibility of correct answers
+        function showAnswers() {
+            const answersDiv = document.getElementById("answers");
+            if (answersDiv.style.display === "none") {
+                answersDiv.style.display = "block";
+            } else {
+                answersDiv.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -21,6 +21,8 @@ categories.forEach(category => {
   });
 });
 
+// java script of scroller
+
 // Handle submit button
 const submitBtn = document.getElementById('submitBtn');
 submitBtn.addEventListener('click', () => {

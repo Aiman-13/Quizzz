@@ -1,0 +1,44 @@
+# This workflow is named "Quizzz CI/CD"
+name: Quizzz CI/CD
+
+# Configuration of the workflow
+on:
+  # Triggers the workflow on push or pull request events for the main branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# A workflow run is made up of one or more jobs
+jobs:
+  # This job is named "build_and_deploy"
+  build_and_deploy:
+    # The type of runner that the job will run on.  Use windows-latest
+    runs-on: windows-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Set up Node.js (only if you have a build process, like a static site generator)
+      - name: Set up Node.js
+        if: false # Change to 'true' if you have a Node.js build process
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+
+      # Install dependencies (if you have a Node.js build process)
+      - name: Install Dependencies
+        if: false # Change to 'true' if you have a Node.js build process
+        run: npm ci
+
+      # Build the project (if you have a Node.js build process)
+      - name: Build Project
+        if: false # Change to 'true' if you have a Node.js build process
+        run: npm run build
+
+      |
+         
+
